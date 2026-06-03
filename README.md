@@ -5,7 +5,8 @@ This project was developed as a third-year B.Tech Mini Project under the Departm
 **Note:** The trained model weights and dataset are not included in this repository. Users can integrate their own compatible models using the provided configuration and integration guide.
 
 
-![Platform Preview]
+## Application Preview
+
 <img width="1364" height="1536" alt="localhost_5173_ (2) (1)(1)" src="https://github.com/user-attachments/assets/761cbcbc-3a0f-4538-b112-952c798dde04" />
 
 
