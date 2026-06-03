@@ -302,7 +302,7 @@ This project is for research and educational purposes. See LICENSE for details.
 
 For issues and questions:
 - Open an issue on GitHub
-- Contact: [your-email@example.com]
+- Contact: [zuha200528@gmail.com]
 
 ## Acknowledgments
 
