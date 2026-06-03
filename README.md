@@ -29,7 +29,7 @@ This project was developed as a third-year B.Tech Mini Project under the Departm
 ## Application Screenshots
 
 ### Prediction Results
-![Prediction Results](screenshots/results-page.png)
+<img width="960" height="1536" alt="localhost_5173_ (3) (1)(1)" src="https://github.com/user-attachments/assets/433c4ec0-a85b-4ceb-8a4a-bf1797e56a68" />
 
 ## Architecture
 
