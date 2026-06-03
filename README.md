@@ -2,7 +2,7 @@
 
 This project was developed as a third-year B.Tech Mini Project under the Department of Computer Science and Engineering at KMEA Engineering College. The objective was to explore and compare multiple deep learning architectures for breast MRI classification and integrate them into a web-based application.
 
-**Note:** The trained model weights and dataset are not included in this repository. Users can integrate their own compatible models using the provided configuration and integration guide.
+**Note:** The trained model weights and dataset are not included in this repository. This repository contains the application source code, documentation, and model integration workflow. Users may integrate their own compatible trained models and obtain the dataset from the original source, subject to the dataset's license and usage terms.
 
 
 ## Application Preview
@@ -30,6 +30,14 @@ This project was developed as a third-year B.Tech Mini Project under the Departm
 
 ### Prediction Results
 <img width="960" height="1536" alt="localhost_5173_ (3) (1)(1)" src="https://github.com/user-attachments/assets/433c4ec0-a85b-4ceb-8a4a-bf1797e56a68" />
+
+## Dataset
+
+This project was developed using a publicly available Breast MRI dataset obtained from Kaggle.
+
+**Dataset Source:** *https://www.kaggle.com/datasets/abenjelloun/breast-mri-tumor-classification-dataset*
+
+
 
 ## Architecture
 
@@ -324,3 +332,4 @@ This project is for research and educational purposes. See LICENSE for details.
 - FastAPI Framework
 - React Community
 - Medical imaging researchers
+- Dataset creators and contributors on Kaggle
