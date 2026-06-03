@@ -1,0 +1,9 @@
+# Place your trained model files (.keras or .h5) in this directory
+# 
+# Expected files:
+# - resnet_model.keras
+# - densenet_model.keras
+# - efficientnet_model.keras
+# - convnext_model.keras
+#
+# Update the paths in app/core/config.py if using different filenames
