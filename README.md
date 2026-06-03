@@ -1,16 +1,19 @@
-# Breast Cancer MRI Classification Platform
+# An Empirical Evaluation of Deep Learning Models for Breast MRI Classification
 
-This project was developed as a third-year B.Tech Mini Project under the Department of Computer Science and Engineering at KMEA Engineering College. The objective was to explore and compare multiple deep learning architectures for breast cancer detection using MRI images and integrate them into a web-based application for image classification.
+This project was developed as a third-year B.Tech Mini Project under the Department of Computer Science and Engineering at KMEA Engineering College. The objective was to explore and compare multiple deep learning architectures for breast MRI classification and integrate them into a web-based application.
 
-![Platform Preview](docs/preview.png)
+**Note:** The trained model weights and dataset are not included in this repository. Users can integrate their own compatible models using the provided configuration and integration guide.
+
+
+![Platform Preview](screenshots/home-page.png)
 
 ## Features
 
 ### Deep Learning Architectures
 
-- **ResNet-50**: Residual Network with skip connections
-- **DenseNet-121**: Densely Connected Convolutional Network
-- **EfficientNet-B0**: Efficiently scaled network architecture
+- **ResNet50**: Residual Network with skip connections
+- **DenseNet121**: Densely Connected Convolutional Network
+- **EfficientNetB0**: Efficiently scaled network architecture
 - **ConvNeXt-Tiny**: Modern CNN inspired by Transformers
 
 ### Key Features
@@ -19,6 +22,11 @@ This project was developed as a third-year B.Tech Mini Project under the Departm
 - Drag-and-drop image upload interface
 - Real-time inference with image preprocessing
 - Responsive web interface for desktop and mobile
+
+## Application Screenshots
+
+### Prediction Results
+![Prediction Results](screenshots/results-page.png)
 
 ## Architecture
 
@@ -30,7 +38,7 @@ breast-cancer-mri-classifier/
 │   │   ├── core/           # Core configuration & model loader
 │   │   ├── services/       # Business logic
 │   │   └── main.py         # Application entry point
-│   ├── models/             # Trained model files (.keras/.h5)
+│   ├── models/             # Model directory (weights not included)
 │   └── requirements.txt
 ├── frontend/               # React + TypeScript frontend
 │   ├── src/
@@ -61,15 +69,16 @@ cd breast-cancer-mri-classifier
 cd backend
 
 # Create virtual environment
-cd backend
-
-# Activate (Linux/Mac)
-source venv/bin/activate
+python -m venv venv
 
 # Activate (Windows)
 venv\Scripts\activate
 
+# Activate (Linux/macOS)
+source venv/bin/activate
+
 # Install dependencies
+pip install -r requirements.txt
 ```
 
 ### 3. Attach Your Models
@@ -120,14 +129,6 @@ npm run dev
 
 The frontend will be available at `http://localhost:5173`
 
-### 6. Build for Production
-
-```bash
-cd frontend
-npm run build
-```
-
-The built files will be in `frontend/dist/` and served by the backend.
 
 ## API Endpoints
 
@@ -163,7 +164,7 @@ curl -X POST "http://localhost:8000/api/v1/compare" \
 ```json
 {
   "model_id": "resnet",
-  "model_name": "ResNet-50",
+  "model_name": "ResNet50",
   "predicted_class": "Benign",
   "confidence": 94.5,
   "inference_time_ms": 245,
@@ -202,6 +203,15 @@ VITE_API_URL=http://localhost:8000/api/v1
 
 ## Model Integration Guide
 
+### Supported Models
+
+- ResNet50
+- DenseNet121
+- EfficientNetB0
+- ConvNeXt-Tiny
+
+The examples in this guide use ResNet50 as the reference implementation. The same integration process can be adapted for the other supported architectures.
+
 ### Step 1: Prepare Your Model
 
 Ensure your trained model:
@@ -232,33 +242,6 @@ MODEL_INFO["resnet"] = {
 
 The model will be automatically loaded on startup.
 
-## Development
-
-### Running Tests
-
-```bash
-# Backend tests
-cd backend
-pytest
-
-# Frontend tests
-cd frontend
-npm test
-```
-
-### Code Style
-
-```bash
-# Backend formatting
-cd backend
-black app/
-isort app/
-
-# Frontend formatting
-cd frontend
-npm run lint
-npm run format
-```
 
 ### Common Issues
 
@@ -280,15 +263,48 @@ Ensure frontend URL is allowed
 Reduce batch size
 Use model quantization
 Enable mixed precision
+
 ```
 
-## Contributing
+## Team Members and Contributions
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests
-5. Submit a pull request
+This project was developed as a collaborative third-year B.Tech Mini Project under the Department of Computer Science and Engineering at KMEA Engineering College.
+
+### Zuha Fathima
+
+- Trained and evaluated the ResNet50 model.
+- Developed and customized the React frontend.
+- Implemented FastAPI backend services.
+- Integrated deep learning models into the application.
+- Developed image preprocessing and prediction workflows.
+- Conducted application testing and debugging.
+
+### Adhila Mansoor
+
+- Trained and evaluated the DenseNet121 model.
+
+### Shivapriya Sreejith
+
+- Trained and evaluated the EfficientNetB0 model.
+
+### Elsi C Pate
+
+- Trained and evaluated the ConvNeXt-Tiny model.
+
+### Collaborative Activities
+
+The following activities were completed collaboratively by all team members:
+
+- Dataset selection and preparation
+- Literature review
+- Model evaluation and comparison
+- Project planning and review
+- Abstract preparation
+- Technical report writing
+- Documentation
+- PPT and presentation preparation
+- Result analysis and discussion
+- Mini project submission and review
 
 ## License
 
@@ -298,11 +314,6 @@ This project is for research and educational purposes. See LICENSE for details.
 
 **Important**: This AI-powered tool is designed for research and educational purposes only. It is not intended to provide medical diagnosis. Always consult with qualified healthcare professionals for medical advice and diagnosis.
 
-## Support
-
-For issues and questions:
-- Open an issue on GitHub
-- Contact: [zuha200528@gmail.com]
 
 ## Acknowledgments
 
